@@ -42,7 +42,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
                         android:textColor="@color/md_theme_onPrimary"
-                        android:text="Hi there! I’m Ragil — 22.53.026610"
+                        android:text="@string/hi_there_i_m_ragil"
                         android:layout_marginHorizontal="17dp"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -53,7 +53,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginHorizontal="17dp"
                         android:textColor="@color/md_theme_onPrimary"
-                        android:text="Learning, growing, and having fun along the way!"
+                        android:text="@string/catalog"
                         android:textAlignment="textStart"
                         android:textSize="15sp" />
                 </LinearLayout>

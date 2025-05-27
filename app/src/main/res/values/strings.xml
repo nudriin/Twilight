@@ -2,4 +2,7 @@
     <string name="app_name">Twilight</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="deskripsi_toko">Deskripsi Toko</string>
+    <string name="daftar_menu_barang">Daftar Menu/barang</string>
+    <string name="keluar">Keluar</string>
 </resources>

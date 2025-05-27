@@ -22,25 +22,25 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        setupView()
+//        setupView()
     }
 
-    private fun setupView() {
-        val data = listOf<UserData>(
-            UserData("Ragil", "ragil@gmail.com", "088128384"),
-            UserData("Nurdin", "nudriin@gmail.com", "08812384"),
-            UserData("FyodoR", "fyodoR@gmail.com", "088128384"),
-            UserData("Rosemary", "rM@gmail.com", "088128384"),
-            UserData("Ouros", "boros@gmail.com", "088128384"),
-        )
-
-        val layoutManager = LinearLayoutManager(this)
-        binding.rvCardList.layoutManager = layoutManager
-        setUserData(data)
-    }
-
-    private fun setUserData(data: List<UserData>) {
-        val adapter = UserAdapter(data)
-        binding.rvCardList.adapter = adapter
-    }
+//    private fun setupView() {
+//        val data = listOf<UserData>(
+//            UserData("Ragil", "ragil@gmail.com", "088128384"),
+//            UserData("Nurdin", "nudriin@gmail.com", "08812384"),
+//            UserData("FyodoR", "fyodoR@gmail.com", "088128384"),
+//            UserData("Rosemary", "rM@gmail.com", "088128384"),
+//            UserData("Ouros", "boros@gmail.com", "088128384"),
+//        )
+//
+//        val layoutManager = LinearLayoutManager(this)
+//        binding.rvCardList.layoutManager = layoutManager
+//        setUserData(data)
+//    }
+//
+//    private fun setUserData(data: List<UserData>) {
+//        val adapter = UserAdapter(data)
+//        binding.rvCardList.adapter = adapter
+//    }
 }

@@ -28,6 +28,7 @@ class UserAdapter(private val cardList: List<UserData>) :
                 tvName.text = data.name
                 tvEmail.text = data.email
                 tvPhone.text = data.phone
+                ivArticleHomeThumbnail.setImageResource(data.imgId)
             }
         }
     }

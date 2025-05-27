@@ -30,11 +30,28 @@ class DetailProductFragment : Fragment() {
 
     private fun setupView() {
         val data = listOf<UserData>(
-            UserData("Ragil", "ragil@gmail.com", "088128384"),
-            UserData("Nurdin", "nudriin@gmail.com", "08812384"),
-            UserData("FyodoR", "fyodoR@gmail.com", "088128384"),
-            UserData("Rosemary", "rM@gmail.com", "088128384"),
-            UserData("Ouros", "boros@gmail.com", "088128384"),
+            UserData(
+                "Nike Pegasus 41 \"Jakob Ingebrigtsen\"",
+                "Men's Road Running Shoes",
+                "Rp 2,199,000",
+                R.drawable.pegasus
+            ),
+            UserData(
+                "A'One 'OG Pearls' EP",
+                "A'ja Wilson Basketball Shoes",
+                "Rp 1,729,000",
+                R.drawable.aone_og_pearls_ep
+            ),
+            UserData(
+                "A'One 'OG Pearl'",
+                "A'ja Wilson Older Kids' Basketball Shoes",
+                "Rp 1,429,000",
+                R.drawable.aone_og_pearl
+            ),
+            UserData(
+                "Nike Zoom Rival Fly 4", "Men's Road Racing Shoes", "Rp 1,549,000",
+                R.drawable.zoom_rival
+            ),
         )
 
         val layoutManager = LinearLayoutManager(requireContext())

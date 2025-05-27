@@ -13,10 +13,18 @@
         <action
             android:id="@+id/action_homeFragment_to_detailProductFragment"
             app:destination="@id/detailProductFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_descriptionFragment"
+            app:destination="@id/descriptionFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailProductFragment"
         android:name="com.nudriin.someproject.ui.DetailProductFragment"
         android:label="fragment_detail_product"
         tools:layout="@layout/fragment_detail_product" />
+    <fragment
+        android:id="@+id/descriptionFragment"
+        android:name="com.nudriin.someproject.ui.DescriptionFragment"
+        android:label="fragment_description"
+        tools:layout="@layout/fragment_description" />
 </navigation>

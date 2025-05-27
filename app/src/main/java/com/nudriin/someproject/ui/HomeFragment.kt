@@ -26,13 +26,24 @@ class HomeFragment : Fragment() {
     }
 
     private fun setupAction() {
-        binding.btnMenu.setOnClickListener {
-            navigateToMenuList()
+        with(binding) {
+            btnMenu.setOnClickListener {
+                navigateToMenuList()
+            }
+
+            btnDescription.setOnClickListener {
+                navigateToDescription()
+            }
         }
     }
 
     private fun navigateToMenuList() {
         val toMenuList = HomeFragmentDirections.actionHomeFragmentToDetailProductFragment()
         Navigation.findNavController(binding.root).navigate(toMenuList)
+    }
+
+    private fun navigateToDescription() {
+        val toDescription = HomeFragmentDirections.actionHomeFragmentToDescriptionFragment()
+        Navigation.findNavController(binding.root).navigate(toDescription)
     }
 }

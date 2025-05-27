@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
+import com.nudriin.someproject.R
 import com.nudriin.someproject.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -33,6 +34,21 @@ class HomeFragment : Fragment() {
 
             btnDescription.setOnClickListener {
                 navigateToDescription()
+            }
+
+            btnExit.setOnClickListener {
+                requireActivity().finishAffinity()
+            }
+
+            topAppBar.setOnMenuItemClickListener { menuItem ->
+                when (menuItem.itemId) {
+                    R.id.menu1 -> {
+                        requireActivity().finishAffinity()
+                        true
+                    }
+
+                    else -> false
+                }
             }
         }
     }

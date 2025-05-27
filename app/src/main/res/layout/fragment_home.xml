@@ -9,7 +9,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/md_theme_primary">
+        android:backgroundTint="@color/md_theme_background">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar"
@@ -17,7 +17,7 @@
             android:layout_height="?attr/actionBarSize"
             app:layout_anchor="@+id/appBarLayout"
             app:layout_anchorGravity="center"
-            app:titleTextColor="@color/md_theme_onPrimary"
+            app:titleTextColor="@color/md_theme_onBackground"
             app:menu="@menu/option_menu"
             app:title="@string/app_name" />
 
@@ -29,27 +29,41 @@
         android:paddingHorizontal="16dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <com.google.android.material.card.MaterialCardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/cardView"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="190dp"
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
-            card_view:cardCornerRadius="15dp"
+            card_view:cardCornerRadius="17dp"
             android:backgroundTint="@color/md_theme_background"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent"
-            card_view:layout_constraintEnd_toEndOf="parent"
-            xmlns:tools="http://schemas.android.com/tools">
+            card_view:layout_constraintEnd_toEndOf="parent">
 
-            <ImageView
-                android:layout_width="490dp"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:layout_gravity="center"
-                android:src="@drawable/home_card_bg"
-                tools:ignore="ContentDescription" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="490dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center"
+                    android:src="@drawable/home_card_bg"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Selamat datang di Twilight Store!"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#FFF" />
+            </FrameLayout>
+
 
         </com.google.android.material.card.MaterialCardView>
 
@@ -60,37 +74,51 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cardView"
-            android:text="@string/app_name"
-            android:textAlignment="center"
-            android:layout_marginTop="16dp"
+            android:text="@string/twilight_store"
+            android:layout_marginTop="27dp"
             android:textStyle="bold"
-            android:textSize="30sp" />
+            android:textSize="20sp" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnMenu"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/llMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvStoreName"
-            android:text="@string/daftar_menu_barang"
-            android:textSize="17sp"
-            android:layout_marginTop="16dp"
-            android:paddingVertical="15dp"
-            app:cornerRadius="20dp" />
+            android:gravity="center_vertical"
+            android:layout_marginTop="27dp">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btnMenu"
-            android:text="@string/deskripsi_toko"
-            android:textSize="17sp"
-            android:layout_marginTop="16dp"
-            android:paddingVertical="15dp"
-            app:cornerRadius="20dp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMenu"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:backgroundTint="@color/md_theme_secondaryContainer"
+                android:textColor="@color/md_theme_onSecondaryContainer"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:text="@string/daftar_menu_barang"
+                android:textAlignment="textStart"
+                android:textSize="20sp"
+                app:cornerRadius="17dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDescription"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:backgroundTint="@color/md_theme_secondaryContainer"
+                android:textColor="@color/md_theme_onSecondaryContainer"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:text="@string/deskripsi_toko"
+                android:textSize="20sp"
+                app:cornerRadius="17dp"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnExit"
@@ -98,13 +126,13 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btnDescription"
-            android:backgroundTint="@color/md_theme_error"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:text="@string/keluar"
-            android:textSize="17sp"
-            android:layout_marginTop="16dp"
-            android:paddingVertical="15dp"
-            app:cornerRadius="20dp" />
+            style="?attr/materialButtonOutlinedStyle"
+            android:textSize="19sp"
+            android:layout_marginBottom="20dp"
+            android:paddingVertical="18dp"
+            app:cornerRadius="17dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
